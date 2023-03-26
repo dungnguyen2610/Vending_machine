@@ -1,0 +1,44 @@
+|wrapper
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
+SW[2] => SW[2].IN1
+SW[3] => SW[3].IN1
+SW[4] => SW[4].IN1
+SW[5] => SW[5].IN1
+SW[6] => SW[6].IN1
+SW[7] => SW[7].IN1
+LEDR[0] <= design_1:dut.result_o
+LEDR[1] <= design_1:dut.result_o
+LEDR[2] <= design_1:dut.result_o
+
+
+|wrapper|design_1:dut
+data0_i[0] => and_tmp[0].IN0
+data0_i[0] => or_tmp[0].IN0
+data0_i[0] => xor_tmp[0].IN0
+data0_i[1] => and_tmp[1].IN0
+data0_i[1] => or_tmp[1].IN0
+data0_i[1] => xor_tmp[1].IN0
+data0_i[2] => and_tmp[2].IN0
+data0_i[2] => or_tmp[2].IN0
+data0_i[2] => xor_tmp[2].IN0
+data1_i[0] => and_tmp[0].IN1
+data1_i[0] => or_tmp[0].IN1
+data1_i[0] => xor_tmp[0].IN1
+data1_i[1] => and_tmp[1].IN1
+data1_i[1] => or_tmp[1].IN1
+data1_i[1] => xor_tmp[1].IN1
+data1_i[2] => and_tmp[2].IN1
+data1_i[2] => or_tmp[2].IN1
+data1_i[2] => xor_tmp[2].IN1
+sel_i[0] => Mux0.IN2
+sel_i[0] => Mux1.IN2
+sel_i[0] => Mux2.IN2
+sel_i[1] => Mux0.IN1
+sel_i[1] => Mux1.IN1
+sel_i[1] => Mux2.IN1
+result_o[0] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+result_o[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+result_o[2] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
